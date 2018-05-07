@@ -1,0 +1,6 @@
+<div class="todo-item">
+  <input class="toggle" type="checkbox" [checked]="todo.completed">
+  <div class="vertical-line"></div>
+  <label>{{todo.title}}</label>
+  <button class="destroy" (click)="removeTodo(todo)"></button>
+</div>
