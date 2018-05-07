@@ -1,37 +1,28 @@
-label {
-  color: #8b8f97;
-  font-size: 16px;
-  text-transform: capitalize;
-
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-
-}
-
-app-todo-list-item {
-  padding: 10px;
-}
-
-input {
-  -webkit-appearance: none;
-  width: 14px;
-  height: 14px;
-  border: 1px solid #ccc;
-  border-left: 1px solid #39b66b;
-  /*margin: 8px 10px;*/
-}
-
-.vertical-line {
-  border-left: 1px solid #39b66b;
-}
-
-input:checked {
-  background: red;
-}
-
 .todo-item {
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid #E6EBED;
+  .container  {
+    label {
+      color: #8b8f97;
+      font-size: 12px;
+      text-transform: capitalize;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .icon-trash {
+      right: 9px;
+      cursor: pointer;
+      position: absolute;
+      display: none;
+    }
+    &:hover {
+      .icon-trash {
+        display: block;
+      }
+    }
+  }
+  .completed {
+    label {
+      text-decoration: line-through;
+    }
+  }
 }

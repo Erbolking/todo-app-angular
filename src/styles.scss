@@ -1,1 +1,70 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+
+  //custom fonts
+  .icon-trash, .icon-add {
+    display: inline-block;
+    background: url('assets/icons/sprite.png') no-repeat;
+    overflow: hidden;
+    text-indent: -9999px;
+    text-align: left;
+  }
+
+  .icon-trash {
+    background-position: -0px -0px;
+    width: 11px;
+    height: 12px;
+  }
+
+  .icon-add {
+    background-position: -0px -12px;
+    width: 8px;
+    height: 8px;
+  }
+
+  // columns
+  .container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    .col {
+      display: flex;
+      align-items: center;
+    }
+
+    .left-col-border {
+      min-width: 24px;
+      border-right: 1px solid #F2E3DF;
+      padding: 7px 13px;
+      padding-right: 8px;
+      margin-right: 3px;
+    }
+
+    .right-col-border {
+      border-left: 1px solid #F2E3DF;
+      overflow: auto;
+      padding: 9px 10px;
+      padding-right: 30px;
+    }
+  }
+
+  // custom checkbox
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #6BB3CA;
+    border-radius: 2px;
+    box-sizing: content-box;
+    cursor: pointer;
+    outline: none;
+    margin: 0 3px;
+
+    &:checked {
+      border: 1px solid #ccc;
+      background: #fdfdfd url('assets/icons/checked.svg') no-repeat center;
+      background-size: 60%;
+    }
+  }
+}
